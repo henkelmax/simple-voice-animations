@@ -7,8 +7,10 @@
     "AbstractClientPlayerMixin"
   ],
   "client": [
+    "AnimationSettingsScreenMixin",
     "AvatarRendererMixin",
     "AvatarRenderStateMixin",
+    "ClientPreferencesSyncMixin",
     "HumanoidModelMixin",
     "ModelPartMixin"
   ],
