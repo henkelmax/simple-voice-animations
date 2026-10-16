@@ -69,7 +69,7 @@ public class AnimationSettingsScreen extends Screen {
         SimpleVoiceAnimationsClient.CLIENT_CONFIG.setHeadAnimationStyle(preferences.getHeadAnimationStyle());
         SimpleVoiceAnimationsClient.CLIENT_CONFIG.setHeadSplitHeight(preferences.getHeadSplitHeight());
         SimpleVoiceAnimationsClient.CLIENT_CONFIG.setIntensity(preferences.getIntensity());
-        Minecraft.getInstance().gui.setScreen(parent);
+        Minecraft.getInstance().setScreen(parent);
     }
 
     private static Component getStyleName(ClientConfig.HeadAnimationStyle style) {

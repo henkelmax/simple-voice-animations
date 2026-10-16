@@ -17,7 +17,7 @@ public class RenderStateExtractor {
     private static final float DEFAULT_HEAD_SCALE = 0.25F;
     private static final float DEFAULT_HEAD_NOD_ROTATION = Mth.DEG_TO_RAD * 20F;
 
-    public static <AvatarlikeEntity extends Avatar & ClientAvatarEntity> void extractRenderState(AvatarlikeEntity entity, AvatarRenderState state, float partialTicks, AnimationDataExtension entityExtension, AnimationRenderExtension stateExtension) {
+    public static void extractRenderState(Avatar entity, AvatarRenderState state, float partialTicks, AnimationDataExtension entityExtension, AnimationRenderExtension stateExtension) {
         Preferences preferences = ClientPreferencesSync.getPreferences(entity.getUUID());
         applyStyle(stateExtension.simplevoiceanimations$getState(), preferences, entityExtension.simplevoiceanimations$getData().getAnimationProgress());
     }

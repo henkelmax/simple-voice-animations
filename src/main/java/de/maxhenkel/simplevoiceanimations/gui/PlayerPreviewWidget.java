@@ -19,7 +19,7 @@ import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.EntityTypes;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Pose;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
@@ -77,9 +77,9 @@ public class PlayerPreviewWidget extends AbstractWidget {
 
     private static EntityRenderState createMenuRenderState() {
         AvatarRenderState renderState = new AvatarRenderState();
-        renderState.entityType = EntityTypes.PLAYER;
+        renderState.entityType = EntityType.PLAYER;
         renderState.skin = SkinUtils.getLocalPlayerSkin();
-        EntityDimensions dimensions = EntityTypes.PLAYER.getDimensions();
+        EntityDimensions dimensions = EntityType.PLAYER.getDimensions();
         renderState.boundingBoxWidth = dimensions.width();
         renderState.boundingBoxHeight = dimensions.height();
         return renderState;

@@ -13,8 +13,8 @@ public class KeyEvents {
             if (mc.player == null) {
                 return;
             }
-            if (SimpleVoiceAnimationsClient.SETTINGS.consumeClick()) {
-                mc.gui.setScreen(new AnimationSettingsScreen());
+if (SimpleVoiceAnimationsClient.SETTINGS.consumeClick()) {
+            Minecraft.getInstance().setScreen(new AnimationSettingsScreen());
             }
         });
     }

@@ -11,10 +11,23 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Player;
 
+import java.lang.reflect.Method;
 import java.util.UUID;
 
 @Environment(EnvType.CLIENT)
 public class ClientVoiceChatEvents {
+
+    private static final Method GET_DATA_METHOD;
+
+    static {
+        Method method = null;
+        try {
+            method = AnimationDataExtension.class.getMethod("simplevoiceanimations$getData");
+        } catch (NoSuchMethodException e) {
+            throw new ExceptionInInitializerError(e);
+        }
+        GET_DATA_METHOD = method;
+    }
 
     public static void onReceiveSound(ClientReceiveSoundEvent event) {
         UUID id = event.getId();
@@ -38,11 +51,12 @@ public class ClientVoiceChatEvents {
     }
 
     private static void processPlayerAudio(Player player, short[] audio) {
-        if (!(player instanceof AnimationDataExtension dataExtension)) {
-            return;
+        try {
+            AnimationData animationData = (AnimationData) GET_DATA_METHOD.invoke(player);
+            animationData.addVoiceData(audio);
+        } catch (Exception e) {
+            // Player doesn't have the mixin applied
         }
-        AnimationData animationData = dataExtension.simplevoiceanimations$getData();
-        animationData.addVoiceData(audio);
     }
 
 }

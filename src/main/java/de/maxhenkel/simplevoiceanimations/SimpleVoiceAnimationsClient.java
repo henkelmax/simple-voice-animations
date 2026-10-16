@@ -8,12 +8,12 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.keymapping.v1.KeyMappingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
-import net.minecraft.ChatFormatting;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import org.lwjgl.sdl.SDLScancode;
+import org.lwjgl.glfw.GLFW;
 
 @Environment(EnvType.CLIENT)
 public class SimpleVoiceAnimationsClient implements ClientModInitializer {
@@ -27,7 +27,7 @@ public class SimpleVoiceAnimationsClient implements ClientModInitializer {
     public void onInitializeClient() {
         KEY_EVENTS = new KeyEvents();
 
-        SETTINGS = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.simplevoiceanimations.settings", SDLScancode.SDL_SCANCODE_J, KeyMapping.Category.MISC));
+        SETTINGS = KeyMappingHelper.registerKeyMapping(new KeyMapping("key.simplevoiceanimations.settings", GLFW.GLFW_KEY_J, KeyMapping.Category.MISC));
 
         Minecraft mc = Minecraft.getInstance();
         CLIENT_CONFIG = ConfigBuilder
