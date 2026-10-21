@@ -1,0 +1,18 @@
+{
+  "modmenu.descriptionTranslation.simplevoiceanimations": "借助 Simple Voice Chat（简易语音聊天），为玩家头部添加说话动画。"
+  "key.simplevoiceanimations.settings": "简易语音动画设置",
+  "message.simplevoiceanimations.incompatible": "简易语音动画版本不兼容",
+  "message.simplevoiceanimations.not_set_up": "你尚未设置头部动画。按 %s 进行配置",
+  "gui.simplevoiceanimations.settings.title": "简易语音动画",
+  "gui.simplevoiceanimations.settings.style": "头部动画样式",
+  "gui.simplevoiceanimations.settings.style.none": "无",
+  "gui.simplevoiceanimations.settings.style.squish": "挤压",
+  "gui.simplevoiceanimations.settings.style.scale_y": "高度缩放",
+  "gui.simplevoiceanimations.settings.style.scale_full": "整体缩放",
+  "gui.simplevoiceanimations.settings.style.split_hinge": "头部裂开（铰链式）",
+  "gui.simplevoiceanimations.settings.style.split_vertical": "头部裂开（垂直式）",
+  "gui.simplevoiceanimations.settings.style.nod": "点头",
+  "gui.simplevoiceanimations.settings.intensity": "动画强度：%s%%",
+  "gui.simplevoiceanimations.settings.split_height": "裂开高度",
+  "gui.simplevoiceanimations.settings.split_height.description": "拖动滑块以设置头部裂开的位置"
+}

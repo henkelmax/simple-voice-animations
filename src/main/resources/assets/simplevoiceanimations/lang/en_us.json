@@ -1,4 +1,5 @@
 {
+  "modmenu.descriptionTranslation.simplevoiceanimations": "Adds speaking animations to player heads using Simple Voice Chat."
   "key.simplevoiceanimations.settings": "Simple Voice Animations Settings",
   "message.simplevoiceanimations.incompatible": "Incompatible Simple Voice Animations version",
   "message.simplevoiceanimations.not_set_up": "You have not set up your head animation yet. Press %s to configure it",
